@@ -1,0 +1,29 @@
+//property generate
+@mixin make-property($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+
+@mixin border-radius($radius) {
+  @include make-property(border-radius,$radius);
+}
+
+
+@mixin opacity($opacity : 1, $ms_opacity : 100){
+  filter: alpha(opacity=$ms_opacity);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ms_opacity)";
+  @include make-property(opacity,$opacity);
+}
+
+
+@mixin transition($property, $duration, $timing-function){
+  $value: #{$property} #{$duration} #{$timing-function};
+  @include make-property(transition,$value);
+}
+
+
+@mixin transform($property){
+  @include make-property(transform,$property);
+}

@@ -1,0 +1,74 @@
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 768px){
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .main{
+        margin-left: 40%; 
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+
+    h2{
+        font-weight: 300;
+    }
+}
+
+
+.form-group{
+    label{
+        width: 100px;
+    }
+}
+
+.btn-black{
+    color: #fff !important;
+}
+
+.error-msg{
+    color: #e12f2f;
+    font-size: 11px;
+}
