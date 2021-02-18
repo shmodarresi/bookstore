@@ -47,8 +47,7 @@ describe("Testing ProductsList", () => {
       </Provider>
     );
 
-    const loading = wrapper.find(Loading);
-    expect(loading).toBeTruthy();
+    expect(wrapper.find(Loading)).toBeTruthy();
   });
 
   it("renders Alert", () => {
@@ -63,7 +62,6 @@ describe("Testing ProductsList", () => {
       </Provider>
     );
 
-    const alert = wrapper.find(Alert);
-    expect(alert).toBeTruthy();
+    expect(wrapper.find(Alert)).toBeTruthy();
   });
 });

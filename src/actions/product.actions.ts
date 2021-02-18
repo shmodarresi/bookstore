@@ -8,7 +8,7 @@ export const getProducts = () => dispatch => {
            res => {
                    dispatch({type: productConstants.GETALL_SUCCESS , books: res.data})
                 },
-           err => dispatch({type: productConstants.GETALL_FAILURE , error: err.response.data})
+           err => dispatch({type: productConstants.GETALL_FAILURE , error: err.data})
         );
         
 }
